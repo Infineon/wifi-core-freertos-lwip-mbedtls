@@ -55,6 +55,8 @@ This library and its features are supported on the following PSoC&trade; 6 platf
 
 - [PSoC&trade; 62S2 evaluation kit (CY8CEVAL-062S2-MUR-43439M2)](https://www.infineon.com/cms/en/product/evaluation-boards/cy8ceval-062s2/)
 
+- [XMC7200D-E272K8384 kit (KIT_XMC72_EVK_MUR_43439M2)](https://www.infineon.com/cms/en/product/evaluation-boards/kit_xmc72_evk/)
+
 ## Quick start
 
 A set of pre-defined configuration files have been bundled with this library for lwIP, and mbed TLS. These files are located in the configs folder.

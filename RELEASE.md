@@ -11,6 +11,10 @@ See the [README.md](./README.md) for a complete description of the [Wi-Fi Core F
 
 ## Changelog
 
+### v1.1.0
+
+- Added support for KIT_XMC72_EVK_MUR_43439M2 kit
+
 ### v1.0.0
 
 - Initial release for Wi-Fi Core FreeRTOS lwIP mbedtls library
@@ -20,12 +24,12 @@ See the [README.md](./README.md) for a complete description of the [Wi-Fi Core F
 
 This version of the library was validated for compatibility with the following software and tools:
 
-| Software and tools                                         | Version |
-| :---                                                       | :----:  |
-| ModusToolbox&trade; software environment                   | 3.0     |
-| ModusToolbox&trade; Device Configurator                  | 4.0    |
+| Software and tools                                              | Version |
+| :---                                                            | :----:  |
+| ModusToolbox&trade; software environment                        | 3.1     |
+| ModusToolbox&trade; Device Configurator                         | 4.10    |
 | ModusToolbox&trade; CAPSENSE&trade; Configurator / Tuner tools  | 5.0     |
-| Peripheral Driver Library (PDL)                     | 3.0.0   |
-| GCC Compiler                                               | 10.3.1  |
-| IAR Compiler                           | 9.30    |
-| Arm&reg; Compiler 6                                             | 6.16   |
+| Peripheral Driver Library (PDL)                                 | 3.0.0   |
+| GCC Compiler                                                    | 11.3.1  |
+| IAR Compiler                                                    | 9.30    |
+| Arm&reg; Compiler 6                                             | 6.16    |
