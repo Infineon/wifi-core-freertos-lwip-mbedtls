@@ -59,6 +59,8 @@ This library and its features are supported on the following PSoC&trade; 6 platf
 
 - [PSoC&trade; 62S2 evaluation kit (CY8CEVAL-062S2-CYW43022CUB)](https://www.infineon.com/cms/en/product/evaluation-boards/cy8ceval-062s2/)
 
+- [PSoC&trade; 62S2 evaluation kit (CY8CEVAL-062S2-CYW955513SDM2WLIPA)]( https://www.infineon.com/cms/en/product/evaluation-boards/cy8ceval-062s2/ )
+
 ## Quick start
 
 A set of pre-defined configuration files have been bundled with this library for lwIP, and mbed TLS. These files are located in the configs folder.
@@ -143,4 +145,4 @@ Following table provides information about some of the options which can be tune
 
 - [Wi-Fi Core FreeRTOS lwIP mbedtls version](./version.xml)
 
-- [ModusToolbox&trade; cloud connectivity code examples](https://github.com/Infineon?q=mtb-example-anycloud%20NOT%20Deprecated)
+- [ModusToolbox&trade; cloud connectivity code examples](https://github.com/Infineon/Code-Examples-for-ModusToolbox-Software)

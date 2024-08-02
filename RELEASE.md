@@ -11,6 +11,10 @@ See the [README.md](./README.md) for a complete description of the [Wi-Fi Core F
 
 ## Changelog
 
+### v2.1.0
+
+- Added support for CY8CEVAL-062S2-CYW955513SDM2WLIPA kit
+
 ### v2.0.0
 
 - Supports TLS protocol version 1.3
