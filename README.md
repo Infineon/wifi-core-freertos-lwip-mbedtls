@@ -21,7 +21,7 @@ This library provides the configuration files for lwIP network stack and mbedTLS
 
 - **lwIP Network Interface Integration Library:** This library is an integration layer that links the lwIP network stack with the underlying Wi-Fi host driver (WHD). See [lwIP Network Interface Integration Library](https://github.com/Infineon/lwip-network-interface-integration) for details.
 
-- **mbed TLS:** An open-source, portable, easy-to-use, readable and flexible SSL library that has cryptographic capabilities, version: 3.4.0. See the [mbed TLS](https://tls.mbed.org/) web site for details.
+- **mbed TLS:** An open-source, portable, easy-to-use, readable and flexible SSL library that has cryptographic capabilities, version: 2.25.0. See the [mbed TLS](https://tls.mbed.org/) web site for details.
 
    **Note:** Using this library in a project will cause mbed TLS to be downloaded on your computer. It is your responsibility to understand and accept the mbed TLS license and regional use restrictions (including abiding by all applicable export control laws).
 
@@ -56,10 +56,6 @@ This library and its features are supported on the following PSoC&trade; 6 platf
 - [PSoC&trade; 62S2 evaluation kit (CY8CEVAL-062S2-MUR-43439M2)](https://www.infineon.com/cms/en/product/evaluation-boards/cy8ceval-062s2/)
 
 - [XMC7200D-E272K8384 kit (KIT_XMC72_EVK_MUR_43439M2)](https://www.infineon.com/cms/en/product/evaluation-boards/kit_xmc72_evk/)
-
-- [PSoC&trade; 62S2 evaluation kit (CY8CEVAL-062S2-CYW43022CUB)](https://www.infineon.com/cms/en/product/evaluation-boards/cy8ceval-062s2/)
-
-- [PSoC&trade; 62S2 evaluation kit (CY8CEVAL-062S2-CYW955513SDM2WLIPA)]( https://www.infineon.com/cms/en/product/evaluation-boards/cy8ceval-062s2/ )
 
 ## Quick start
 
@@ -122,19 +118,6 @@ You should do the following:
 
 Secure sockets, lwIP, and mbed TLS libraries contain reference and test applications. To ensure that these applications do not conflict with the code examples, a *.cyignore* file is also included with this library.
 
-## mbed TLS code size tunables
-mbed TLS library by default enables several functionalities and it provides option for the users to tune based on their need through mbedtls_user_config file. wifi-core-freertos-lwip-mbedtls repo contains configs/mbedtls_user_config.h file which disables some of the features which are not frequently used. On memory constrained platform, user can additionally disable the features which are not required for the target application.
-
-Following table provides information about some of the options which can be tuned further to reduce the overall code size.
-
-| mbed TLS config | Code size saving | Comments |
-| :---         | :----           |   :---- |          
-| `#define MBEDTLS_X509_REMOVE_INFO`  | ~8K | MBEDTLS_X509_REMOVE_INFO will omit mbedtls_x509_*_info(), as well as mbedtls_debug_print_crt() and other functions/constants only used by these functions, thus reducing the code footprint by several KB. |
-| `#undef MBEDTLS_ARIA_C` | ~6K | Disable the ARIA ciphers. |
-| `#undef MBEDTLS_SSL_SRV_C` | ~16K | When application use-case to run only secure client. In such case, server functionality can be disabled to save code size. |
-| `#undef MBEDTLS_SSL_CLI_C`                                               | ~14K                    | When application use-case to run only secure server. In such case, client functionality can be disabled to save code size. |
-| `#undef MBEDTLS_CAMELLIA_C`                                       | ~7K                      | Disable the Camellia block cipher.  |
-
 ## Additional information
 
 - [Wi-Fi Core FreeRTOS lwIP mbedtls RELEASE.md](./RELEASE.md)
@@ -145,4 +128,4 @@ Following table provides information about some of the options which can be tune
 
 - [Wi-Fi Core FreeRTOS lwIP mbedtls version](./version.xml)
 
-- [ModusToolbox&trade; cloud connectivity code examples](https://github.com/Infineon/Code-Examples-for-ModusToolbox-Software)
+- [ModusToolbox&trade; cloud connectivity code examples](https://github.com/Infineon?q=mtb-example-anycloud%20NOT%20Deprecated)
