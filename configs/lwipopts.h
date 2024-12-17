@@ -68,11 +68,22 @@
 #define LWIP_UDP                        (1)
 #define LWIP_IGMP                       (1)
 
+// The size of PBUF_RAM. For M7 core, memory for
+// PBUF_RAM buffers are allocated from this pool.
+//
+#if !defined (CY_DISABLE_XMC7000_DATA_CACHE) && defined (__DCACHE_PRESENT) && (__DCACHE_PRESENT == 1U)
+#define MEM_SIZE                        (32*1600)
+#endif
+
 //
 // Use malloc to allocate any memory blocks instead of the
 // malloc that is part of LWIP
 //
+#if !defined (CY_DISABLE_XMC7000_DATA_CACHE) && defined (__DCACHE_PRESENT) && (__DCACHE_PRESENT == 1U)
+#define MEM_LIBC_MALLOC                 (0)
+#else
 #define MEM_LIBC_MALLOC                 (1)
+#endif
 
 //
 // The standard library does not provide errno, use the one
@@ -211,7 +222,7 @@
 /**
  * PBUF_POOL_SIZE: the number of buffers in the pbuf pool.
  */
-#define PBUF_POOL_SIZE                  24
+#define PBUF_POOL_SIZE                  5
 
 /**
  * MEMP_NUM_NETBUF: the number of struct netbufs.

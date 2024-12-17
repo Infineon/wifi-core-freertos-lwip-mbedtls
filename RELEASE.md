@@ -7,9 +7,23 @@ See the [README.md](./README.md) for a complete description of the [Wi-Fi Core F
 ## Known issues
 | Problem | Workaround |
 | ------- | ---------- |
-| IAR 9.30 toolchain throws build errors on Debug mode, if application explicitly includes iar_dlmalloc.h file | Add '--advance-heap' to LDFLAGS in application Makefile. |
+| IAR 9.30 toolchain throws build errors on Debug mode, if application explicitly includes iar_dlmalloc.h file. | Add '--advance-heap' to LDFLAGS in application Makefile. |
 
 ## Changelog
+
+### v2.2.0
+
+- Added support for D-cache enablement on XMC7200 devices.
+
+### v2.1.0
+
+- Added support for CY8CEVAL-062S2-CYW955513SDM2WLIPA kit
+
+### v2.0.0
+
+- Supports TLS protocol version 1.3
+- Supports Mbed TLS version 3.4.0
+- Added support for CY8CEVAL-062S2-CYW43022CUB kit
 
 ### v1.1.0
 
@@ -26,10 +40,8 @@ This version of the library was validated for compatibility with the following s
 
 | Software and tools                                              | Version |
 | :---                                                            | :----:  |
-| ModusToolbox&trade; software environment                        | 3.1     |
-| ModusToolbox&trade; Device Configurator                         | 4.10    |
-| ModusToolbox&trade; CAPSENSE&trade; Configurator / Tuner tools  | 5.0     |
-| Peripheral Driver Library (PDL)                                 | 3.0.0   |
+| ModusToolbox&trade; software environment                        | 3.3     |
+| ModusToolbox&trade; Device Configurator                         | 5.10    |
 | GCC Compiler                                                    | 11.3.1  |
-| IAR Compiler                                                    | 9.30    |
-| Arm&reg; Compiler 6                                             | 6.16    |
+| IAR Compiler                                                    | 9.50.2  |
+| Arm&reg; Compiler 6                                             | 6.22    |
