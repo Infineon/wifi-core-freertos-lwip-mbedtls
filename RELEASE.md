@@ -8,8 +8,13 @@ See the [README.md](./README.md) for a complete description of the [Wi-Fi Core F
 | Problem | Workaround |
 | ------- | ---------- |
 | IAR 9.30 toolchain throws build errors on Debug mode, if application explicitly includes iar_dlmalloc.h file. | Add '--advance-heap' to LDFLAGS in application Makefile. |
+| MQTT connection to Azure Cloud fails with *Azure Software Development Kit (SDK) for Embedded C* on [XMC7200D-E272K8384 kit (KIT_XMC72_EVK_MUR_43439M2)](https://www.infineon.com/cms/en/product/evaluation-boards/kit_xmc72_evk/). | Disable mbedTLS acceleration by adding `DISABLE_MBEDTLS_ACCELERATION` to Makefile define. |
 
 ## Changelog
+
+### v2.2.1
+
+- Enabled Mbedtls acceleration with D-cache on XMC7200 devices.
 
 ### v2.2.0
 
