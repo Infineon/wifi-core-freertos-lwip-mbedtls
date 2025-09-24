@@ -68,9 +68,11 @@
 #define LWIP_UDP                        (1)
 #define LWIP_IGMP                       (1)
 
-// The size of PBUF_RAM. For M7 core, memory for
-// PBUF_RAM buffers are allocated from this pool.
-//
+/**
+ * On the devices where DCache is present and enabled, memory for PBUF_RAM buffers are allocated from this pool.
+ * This is the minimum memory required for wifi connection and data transfer.
+ * Tune this according to application requirement.
+*/
 #if !defined (CY_DISABLE_XMC7000_DATA_CACHE) && defined (__DCACHE_PRESENT) && (__DCACHE_PRESENT == 1U)
 #define MEM_SIZE                        (32*1600)
 #endif
@@ -91,7 +93,7 @@
 //
 #define LWIP_PROVIDE_ERRNO              (1)
 
-#if defined(__GNUC__) && !defined(__ARMCC_VERSION)
+#if !defined(__llvm__) && defined(__GNUC__) && !defined(__ARMCC_VERSION)
 //
 // Use the timeval from the GCC library, not the one
 // from LWIP
@@ -222,7 +224,7 @@
 /**
  * PBUF_POOL_SIZE: the number of buffers in the pbuf pool.
  */
-#define PBUF_POOL_SIZE                  5
+#define PBUF_POOL_SIZE                  15
 
 /**
  * MEMP_NUM_NETBUF: the number of struct netbufs.
@@ -285,4 +287,16 @@
 
 #define LWIP_CHKSUM_ALGORITHM         (3)
 
+/**
+ * On M55 core in non-debug optimization level with GCC compiler, standard lwip chksum
+ * function returns incorrect values so use cy_lwip_standard_chksum() for check sum calculation.
+ */
+#if (CY_CPU_CORTEX_M55) && defined(__GNUC__) && !defined(__ARMCC_VERSION) && !defined(__llvm__) && defined(NDEBUG)
+#define LWIP_CHKSUM                   cy_lwip_standard_chksum
+extern uint16_t                       cy_lwip_standard_chksum() ;
+#endif
+
 extern void sys_check_core_locking() ;
+
+/* Increased 64 bytes for each pbuf allocated from RX pool for memory alignment */
+#define PBUF_POOL_BUFSIZE LWIP_MEM_ALIGN_SIZE(TCP_MSS+40+PBUF_LINK_ENCAPSULATION_HLEN+PBUF_LINK_HLEN+64)

@@ -23,20 +23,21 @@ $(SEARCH_lwip)/src/apps
 $(SEARCH_lwip)/src/netif/ppp
 $(SEARCH_lwip)/src/netif/slipif.c
 
-../mbedtls/3rdparty
-../mbedtls/configs
-../mbedtls/programs
-../mbedtls/scripts
-../mbedtls/tests
-../mbedtls/doxygen
-../mbedtls/library/net_sockets.c
-$(SEARCH_mbedtls)/3rdparty
-$(SEARCH_mbedtls)/configs
-$(SEARCH_mbedtls)/programs
-$(SEARCH_mbedtls)/scripts
-$(SEARCH_mbedtls)/tests
-$(SEARCH_mbedtls)/doxygen
-$(SEARCH_mbedtls)/library/net_sockets.c
+../ifx-mbedtls/3rdparty
+../ifx-mbedtls/configs
+../ifx-mbedtls/programs
+../ifx-mbedtls/scripts
+../ifx-mbedtls/tests
+../ifx-mbedtls/doxygen
+../ifx-mbedtls/library/net_sockets.c
+$(SEARCH_ifx-mbedtls)/3rdparty
+$(SEARCH_ifx-mbedtls)/configs
+$(SEARCH_ifx-mbedtls)/programs
+$(SEARCH_ifx-mbedtls)/scripts
+$(SEARCH_ifx-mbedtls)/tests
+$(SEARCH_ifx-mbedtls)/doxygen
+$(SEARCH_ifx-mbedtls)/library/net_sockets.c
+
 
 ../wifi-host-driver/docs
 $(SEARCH_wifi-host-driver)/docs
