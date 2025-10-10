@@ -11,6 +11,9 @@ See the [README.md](./README.md) for a complete description of the [Wi-Fi Core F
 
 ## Changelog
 
+### v3.1.0
+- Added Trusted Firmware-M (TF-M) support for WiFi connectivity on CM33
+
 ### v3.0.0
 
 - Added support for PSOC™ Edge E84 (PSE84) platform.
