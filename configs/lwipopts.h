@@ -101,6 +101,14 @@
 #define LWIP_TIMEVAL_PRIVATE            (0)
 #endif
 
+// LLVM toolchain defines errno as thread local storage (TLS) and LWIP errno.h header file
+// declares errno as non thread local variable which is causing an issue. Hence, defining errno
+// here to avoid redeclaring it in LWIP errno.h
+#if defined(__llvm__) && !defined(__ARMCC_VERSION)
+__attribute__((weak)) __thread int __lwip_errno = 0;
+#define errno __lwip_errno
+#endif
+
 //
 // Make sure DHCP is part of the stack
 //

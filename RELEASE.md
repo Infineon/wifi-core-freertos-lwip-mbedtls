@@ -11,6 +11,10 @@ See the [README.md](./README.md) for a complete description of the [Wi-Fi Core F
 
 ## Changelog
 
+### v3.1.1
+
+- Minor bug fix.
+
 ### v3.1.0
 - Added Trusted Firmware-M (TF-M) support for WiFi connectivity on CM33
 
