@@ -11,6 +11,10 @@ See the [README.md](./README.md) for a complete description of the [Wi-Fi Core F
 
 ## Changelog
 
+### v3.1.2
+
+- Supports Mbed TLS version 3.6.6
+
 ### v3.1.1
 
 - Minor bug fix.

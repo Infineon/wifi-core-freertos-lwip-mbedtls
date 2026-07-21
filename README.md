@@ -21,7 +21,7 @@ This library provides the configuration files for lwIP network stack and mbedTLS
 
 - **lwIP Network Interface Integration Library:** This library is an integration layer that links the lwIP network stack with the underlying Wi-Fi host driver (WHD). See [lwIP Network Interface Integration Library](https://github.com/Infineon/lwip-network-interface-integration) for details.
 
-- **mbed TLS:** An open-source, portable, easy-to-use, readable and flexible SSL library that has cryptographic capabilities, version: 3.4.0. See the [mbed TLS](https://tls.mbed.org/) web site for details.
+- **mbed TLS:** An open-source, portable, easy-to-use, readable and flexible SSL library that has cryptographic capabilities, version: 3.6.6. See the [mbed TLS](https://tls.mbed.org/) web site for details.
 
    **Note:** <br/> 
    1. Using this library in a project will cause mbed TLS to be downloaded on your computer. It is your responsibility to understand and accept the mbed TLS license and regional use restrictions (including abiding by all applicable export control laws). <br/> 
