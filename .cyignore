@@ -23,23 +23,49 @@ $(SEARCH_lwip)/src/apps
 $(SEARCH_lwip)/src/netif/ppp
 $(SEARCH_lwip)/src/netif/slipif.c
 
-../ifx-mbedtls/3rdparty
-../ifx-mbedtls/configs
-../ifx-mbedtls/programs
-../ifx-mbedtls/scripts
-../ifx-mbedtls/tests
-../ifx-mbedtls/doxygen
-../ifx-mbedtls/library/net_sockets.c
-$(SEARCH_ifx-mbedtls)/3rdparty
-$(SEARCH_ifx-mbedtls)/configs
-$(SEARCH_ifx-mbedtls)/programs
-$(SEARCH_ifx-mbedtls)/scripts
-$(SEARCH_ifx-mbedtls)/tests
-$(SEARCH_ifx-mbedtls)/doxygen
-$(SEARCH_ifx-mbedtls)/library/net_sockets.c
+$(SEARCH_mbedtls)/tests
+$(SEARCH_mbedtls)/tf-psa-crypto
+$(SEARCH_mbedtls)/3rdparty
+$(SEARCH_mbedtls)/ChangeLog
+$(SEARCH_mbedtls)/ChangeLog.d
+$(SEARCH_mbedtls)/cmake
+$(SEARCH_mbedtls)/configs
+$(SEARCH_mbedtls)/docs
+$(SEARCH_mbedtls)/doxygen
+$(SEARCH_mbedtls)/output
+$(SEARCH_mbedtls)/programs
+$(SEARCH_mbedtls)/scripts
+$(SEARCH_mbedtls)/framework
+$(SEARCH_mbedtls)/tmp
+$(SEARCH_mbedtls)/visualc
+$(SEARCH_mbedtls)/library/mbedtls_config.c
 
+# Exclude TF-PSA-Crypto config check file that rejects legacy macros
+# (MBEDTLS_ENTROPY_C, MBEDTLS_ECP_DP_*_ENABLED needed for middleware compatibility)
+$(SEARCH_ifx-tf-psa-crypto)/core/tf_psa_crypto_config.c
+
+$(SEARCH_ifx-tf-psa-crypto)/programs/
+$(SEARCH_ifx-tf-psa-crypto)/framework
+$(SEARCH_ifx-tf-psa-crypto)/framework/tests
+$(SEARCH_ifx-tf-psa-crypto)/tests
+$(SEARCH_ifx-tf-psa-crypto)/drivers/pqcp/mldsa-native/examples
+$(SEARCH_ifx-tf-psa-crypto)/drivers/pqcp/mldsa-native/dev
+$(SEARCH_ifx-tf-psa-crypto)/drivers/pqcp/mldsa-native/test
+$(SEARCH_ifx-tf-psa-crypto)/drivers/pqcp/mldsa-native/tests
+$(SEARCH_ifx-tf-psa-crypto)/drivers/pqcp/mldsa-native/scripts
+$(SEARCH_ifx-tf-psa-crypto)/drivers/pqcp/mldsa-native/proofs
+$(SEARCH_ifx-tf-psa-crypto)/drivers/pqcp/mldsa-native/mldsa/mldsa_native.S
+$(SEARCH_ifx-tf-psa-crypto)/drivers/pqcp/mldsa-native/mldsa/src
+$(SEARCH_ifx-tf-psa-crypto)/drivers/everest
+
+$(SEARCH_ifx-tf-psa-port)/compat/include
+
+$(SEARCH_ifx-wolfcrypto)
+$(SEARCH_ifx-wolfcrypto)/wolfcrypt/src/*.S
+$(SEARCH_ifx-wolfcrypto)/wolfcrypt/src/test
 
 ../wifi-host-driver/docs
 $(SEARCH_wifi-host-driver)/docs
 
 $(SEARCH_aws-iot-device-sdk-embedded-C)/libraries/standard/corePKCS11/source/dependency/3rdparty/mbedtls_utils/mbedtls_error.c
+$(SEARCH_aws-iot-device-sdk-embedded-C)/libraries/standard/corePKCS11/source/dependency/3rdparty/mbedtls_utils/mbedtls_utils.c

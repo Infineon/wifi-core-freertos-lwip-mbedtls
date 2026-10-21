@@ -6,10 +6,15 @@ See the [README.md](./README.md) for a complete description of the [Wi-Fi Core F
 
 ## Known issues
 | Problem | Workaround |
-| ------- | ---------- |
+| :--- | :--- |
 | IAR 9.30 toolchain throws build errors on Debug mode, if application explicitly includes iar_dlmalloc.h file. | Add '--advance-heap' to LDFLAGS in application Makefile. |
 
 ## Changelog
+
+### v4.0.0
+
+- Added support for Mbed TLS version 4.2.0
+- Documentation updates to make documentation AI-friendly, minor fixes for the assets to make them Hobsification-compatible and minor code update.
 
 ### v3.1.2
 
@@ -58,15 +63,3 @@ See the [README.md](./README.md) for a complete description of the [Wi-Fi Core F
 - Initial release for Wi-Fi Core FreeRTOS lwIP mbedtls library
 - Provides the configuration files for lwIP network stack and mbedTLS security stack.
 
-### Supported software and tools
-
-This version of the library was validated for compatibility with the following software and tools:
-
-| Software and tools                                              | Version |
-| :---                                                            | :----:  |
-| ModusToolbox&trade; software environment                        | 3.6     |
-| ModusToolbox&trade; Device Configurator                         | 5.30    |
-| GCC Compiler                                                    | 14.2.1  |
-| IAR Compiler                                                    | 9.50.2  |
-| Arm&reg; Compiler 6                                             | 6.22    |
-| LLVM compiler                                                   | 19.1.5  |
